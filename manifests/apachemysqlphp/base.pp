@@ -1,3 +1,3 @@
-class profile::apachemysqlphp::web {
+class profile::apachemysqlphp::base {
   include profile::core::base
 }
