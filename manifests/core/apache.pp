@@ -1,5 +1,5 @@
 class profile::core::apache (
-  $timeout            = '120',
+  $timeout            = '60',
 ) {
 
   class {'::apache':
