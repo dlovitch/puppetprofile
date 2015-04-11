@@ -14,9 +14,12 @@ class profile::core::phpapache {
   #class { 'php::fpm': }
 
   class {'::apache':
-    timeout => $timeout,
+    timeout     => $timeout,
+    mpm_module  => 'false',
   }
 
-  include apache::mod::php
+  class {'::apache::mod::prefork': }
+
+  class {'::apache::mod::php': }
 
 }
